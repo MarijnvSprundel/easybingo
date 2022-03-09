@@ -1,0 +1,50 @@
+*{
+  font-family: "Helvetica Neue";
+}
+.balls-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.balls-slots{
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  width: 80%;
+  text-align: center;
+  background-color: darkgray;
+  grid-gap: 5px;
+  border: 5px solid darkgray;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.balls-slots p{
+  margin: 0;
+  padding: 20px 0;
+  background-color: azure;
+  transition: background-color 0.2s ease-in-out;
+}
+.balls-container button{
+  margin-top: 10px;
+  cursor: pointer;
+  border: 3px solid darkgray;
+  background-color: lightgray;
+  font-size: 1em;
+  padding: 5px 20px;
+  border-radius: 4px;
+}
+.balls-container button:active{
+  background-color: #b9b9b9;
+}
+.balls-last{
+  display: flex;
+}
+.balls-last p{
+  margin: 0 10px 0 10px;
+  min-width: 20px;
+  padding: 7px;
+  text-align: center;
+  background-color: azure;
+  border: 3px solid gray;
+  border-radius: 20px;
+}

@@ -1,0 +1,16 @@
+<div class="card-container">
+  <div class="card-letters">
+    <p>B</p>
+    <p>I</p>
+    <p>N</p>
+    <p>G</p>
+    <p>O</p>
+  </div>
+  <div class="card-grid" >
+    <p (click)="changeColor($event)" *ngFor="let num of numbers">{{num}}</p>
+  </div>
+  <div class="card-regenerate">
+    <button (click)="regenerateCard()">Regenerate Card</button>
+  </div>
+</div>
+

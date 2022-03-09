@@ -1,0 +1,14 @@
+<div class="balls-container">
+  <div class="balls-slots">
+    <p *ngFor="let slot of slots" [ngStyle]="{'background-color': findBall(slot)}">{{slot}}</p>
+  </div>
+  <p *ngIf="balls.length >= 75">All balls have been pulled!</p>
+
+  <button *ngIf="balls.length < 75" (click)="generateBall()">Get ball</button>
+  <button *ngIf="balls.length >= 75" (click)="clearBalls()">Clear</button>
+  <h3>Most recent numbers:</h3>
+  <div class="balls-last">
+    <p *ngFor="let ball of balls.slice(-5)" @comeIn>{{ball}}</p>
+  </div>
+</div>
+
